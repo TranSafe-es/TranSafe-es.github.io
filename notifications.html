@@ -738,23 +738,6 @@ margin-bottom: 20px;
     }
   }
 };
-  defs.SubHall = {
-  "type" : "object",
-  "properties" : {
-    "number_of_transactions" : {
-      "type" : "integer",
-      "description" : "Number of transactions"
-    },
-    "total_value" : {
-      "type" : "integer",
-      "description" : "Total value"
-    },
-    "number_of_refunded" : {
-      "type" : "integer",
-      "description" : "number of refunded"
-    }
-  }
-};
   </script>
 
 <div class="container-fluid">
@@ -774,31 +757,15 @@ margin-bottom: 20px;
                     <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
 
-                                <li class="nav-header" data-group="Objects"><a href="#api-Objects">API Methods - Objects</a></li>
-                                    <li data-group="Objects" data-name="objectDetailsObjectIdGet" class="">
-                                        <a href="#api-Objects-objectDetailsObjectIdGet">objectDetailsObjectIdGet</a>
+                                <li class="nav-header" data-group="Notifications"><a href="#api-Notifications">API Methods - Notifications</a></li>
+                                    <li data-group="Notifications" data-name="notificationEmailPost" class="">
+                                        <a href="#api-Notifications-notificationEmailPost">notificationEmailPost</a>
                                     </li>
-                                    <li data-group="Objects" data-name="objectListIdentifierGet" class="">
-                                        <a href="#api-Objects-objectListIdentifierGet">objectListIdentifierGet</a>
+                                    <li data-group="Notifications" data-name="notificationMessengerPost" class="">
+                                        <a href="#api-Notifications-notificationMessengerPost">notificationMessengerPost</a>
                                     </li>
-                                    <li data-group="Objects" data-name="objectNewPost" class="">
-                                        <a href="#api-Objects-objectNewPost">objectNewPost</a>
-                                    </li>
-                                <li class="nav-header" data-group="Transactions"><a href="#api-Transactions">API Methods - Transactions</a></li>
-                                    <li data-group="Transactions" data-name="transactionDetailsIdGet" class="">
-                                        <a href="#api-Transactions-transactionDetailsIdGet">transactionDetailsIdGet</a>
-                                    </li>
-                                    <li data-group="Transactions" data-name="transactionHistoryIdentifierGet" class="">
-                                        <a href="#api-Transactions-transactionHistoryIdentifierGet">transactionHistoryIdentifierGet</a>
-                                    </li>
-                                    <li data-group="Transactions" data-name="transactionNewPost" class="">
-                                        <a href="#api-Transactions-transactionNewPost">transactionNewPost</a>
-                                    </li>
-                                    <li data-group="Transactions" data-name="transactionStatePost" class="">
-                                        <a href="#api-Transactions-transactionStatePost">transactionStatePost</a>
-                                    </li>
-                                    <li data-group="Transactions" data-name="transactionStatsGet" class="">
-                                        <a href="#api-Transactions-transactionStatsGet">transactionStatsGet</a>
+                                    <li data-group="Notifications" data-name="notificationSmsPost" class="">
+                                        <a href="#api-Notifications-notificationSmsPost">notificationSmsPost</a>
                                     </li>
 
 
@@ -829,8 +796,8 @@ margin-bottom: 20px;
             <div id="sections">
 
 
-                            <section id="api-Objects">
-                                <h1>Objects</h1>
+                            <section id="api-Notifications">
+                                <h1>Notifications</h1>
 
 
 
@@ -838,12 +805,12 @@ margin-bottom: 20px;
 
 
 
-                                    <div id="api-Objects-objectDetailsObjectIdGet">
+                                    <div id="api-Notifications-notificationEmailPost">
 
-                                        <article id="api-Objects-objectDetailsObjectIdGet-0" data-group="User" data-name="objectDetailsObjectIdGet" data-version="0">
+                                        <article id="api-Notifications-notificationEmailPost-0" data-group="User" data-name="notificationEmailPost" data-version="0">
                                             <div class="pull-left">
-                                                <h1>objectDetailsObjectIdGet</h1>
-                                                <p>For a given object, list the details about that objects</p>
+                                                <h1>notificationEmailPost</h1>
+                                                <p>Create a notification, destination which can be different, for this endpoint will be email</p>
                                             </div>
                                             <div class="pull-right">
 
@@ -851,11 +818,11 @@ margin-bottom: 20px;
                                             <div class="clearfix"></div>
 
                                             <p></p>
-                                            <p class="marked">For a given object, list the details about that objects</p>
+                                            <p class="marked">This endpoint will send an email for an especific email</p>
                                             <p></p>
                                             <br />
 
-                                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/object/details/{object_id}</span></code></pre>
+                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/notification/email/</span></code></pre>
 
                                             <p>
                                                 <h3>Usage and SDK Samples</h3>
@@ -863,63 +830,64 @@ margin-bottom: 20px;
 
                                             <ul class="nav nav-tabs nav-tabs-examples">
                                                 <li class="active">
-                                                    <a href="#examples-Objects-objectDetailsObjectIdGet-0-curl">Curl</a>
+                                                    <a href="#examples-Notifications-notificationEmailPost-0-curl">Curl</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Objects-objectDetailsObjectIdGet-0-java">Java</a>
+              <a href="#examples-Notifications-notificationEmailPost-0-java">Java</a>
             </li>
             <li class="">
-              <a href="#examples-Objects-objectDetailsObjectIdGet-0-android">Android</a>
+              <a href="#examples-Notifications-notificationEmailPost-0-android">Android</a>
             </li>
             <!--<li class="">
-              <a href="#examples-Objects-objectDetailsObjectIdGet-0-groovy">Groovy</a>
+              <a href="#examples-Notifications-notificationEmailPost-0-groovy">Groovy</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Objects-objectDetailsObjectIdGet-0-objc">Obj-C</a>
+                                                    <a href="#examples-Notifications-notificationEmailPost-0-objc">Obj-C</a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="#examples-Objects-objectDetailsObjectIdGet-0-javascript">JavaScript</a>
+                                                    <a href="#examples-Notifications-notificationEmailPost-0-javascript">JavaScript</a>
                                                 </li>
                                                 <!--<li class="">
-              <a href="#examples-Objects-objectDetailsObjectIdGet-0-angular">Angular</a>
+              <a href="#examples-Notifications-notificationEmailPost-0-angular">Angular</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Objects-objectDetailsObjectIdGet-0-csharp">C#</a>
+                                                    <a href="#examples-Notifications-notificationEmailPost-0-csharp">C#</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Objects-objectDetailsObjectIdGet-0-php">PHP</a>
+              <a href="#examples-Notifications-notificationEmailPost-0-php">PHP</a>
             </li>
                                             </ul>
 
                                             <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Objects-objectDetailsObjectIdGet-0-curl">
+                                                <div class="tab-pane active" id="examples-Notifications-notificationEmailPost-0-curl">
                                                     <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">get</span> "https://tracker.es.com/api/v1/object/details/{object_id}"
+curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/notification/email/?email=&message="
 
 
 </code></pre>
                                                 </div>
 
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-java">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-java">
                                                   <pre class="prettyprint"><code class="language-java">
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import .ObjectsApi;
+import .NotificationsApi;
 
 import java.io.File;
 import java.util.*;
 
-public class ObjectsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
         
-        ObjectsApi apiInstance = new ObjectsApi();
-        String objectId = objectId_example; // String | The object uuid
+        NotificationsApi apiInstance = new NotificationsApi();
+        String email = email_example; // String | The email
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.objectDetailsObjectIdGet(objectId);
+            apiInstance.notificationEmailPost(email, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectDetailsObjectIdGet");
+            System.err.println("Exception when calling NotificationsApi#notificationEmailPost");
             e.printStackTrace();
         }
     }
@@ -929,19 +897,20 @@ public class ObjectsApiExample {
           </div>
 
 
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-android">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-android">
                                                   <pre class="prettyprint"><code class="language-java">
-import .ObjectsApi;
+import .NotificationsApi;
 
-public class ObjectsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
-        ObjectsApi apiInstance = new ObjectsApi();
-        String objectId = objectId_example; // String | The object uuid
+        NotificationsApi apiInstance = new NotificationsApi();
+        String email = email_example; // String | The email
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.objectDetailsObjectIdGet(objectId);
+            apiInstance.notificationEmailPost(email, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectDetailsObjectIdGet");
+            System.err.println("Exception when calling NotificationsApi#notificationEmailPost");
             e.printStackTrace();
         }
     }
@@ -951,20 +920,22 @@ public class ObjectsApiExample {
           </div>
 
           <!--
-          <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-groovy">
+          <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-groovy">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div> -->
 
 
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-objc">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-objc">
                                                     <pre class="prettyprint"><code class="language-cpp">
 
-String *objectId = objectId_example; // The object uuid
+String *email = email_example; // The email
+String *message = message_example; // The message to send
 
-ObjectsApi *apiInstance = [[ObjectsApi alloc] init];
+NotificationsApi *apiInstance = [[NotificationsApi alloc] init];
 
-// For a given object, list the details about that objects
-[apiInstance objectDetailsObjectIdGetWith:objectId
+// Create a notification, destination which can be different, for this endpoint will be email
+[apiInstance notificationEmailPostWith:email
+    message:message
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -973,13 +944,15 @@ ObjectsApi *apiInstance = [[ObjectsApi alloc] init];
 
                                                     </code></pre>
                                                 </div>
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-javascript">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-javascript">
                                                     <pre class="prettyprint"><code class="language-js">
 var  = require('');
 
-var api = new .ObjectsApi()
+var api = new .NotificationsApi()
 
-var objectId = objectId_example; // {String} The object uuid
+var email = email_example; // {String} The email
+
+var message = message_example; // {String} The message to send
 
 
 var callback = function(error, data, response) {
@@ -989,16 +962,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.objectDetailsObjectIdGet(objectId, callback);
+api.notificationEmailPost(email, message, callback);
 
                                                     </code></pre>
                                                 </div>
 
-                                                <!--<div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-angular">
+                                                <!--<div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-angular">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div>-->
 
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-csharp">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-csharp">
                                                     <pre class="prettyprint"><code class="language-cs">
 using System;
 using System.Diagnostics;
@@ -1008,22 +981,23 @@ using ;
 
 namespace Example
 {
-    public class objectDetailsObjectIdGetExample
+    public class notificationEmailPostExample
     {
         public void main()
         {
             
-            var apiInstance = new ObjectsApi();
-            var objectId = objectId_example;  // String | The object uuid
+            var apiInstance = new NotificationsApi();
+            var email = email_example;  // String | The email
+            var message = message_example;  // String | The message to send
 
             try
             {
-                // For a given object, list the details about that objects
-                apiInstance.objectDetailsObjectIdGet(objectId);
+                // Create a notification, destination which can be different, for this endpoint will be email
+                apiInstance.notificationEmailPost(email, message);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ObjectsApi.objectDetailsObjectIdGet: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.notificationEmailPost: " + e.Message );
             }
         }
     }
@@ -1033,921 +1007,19 @@ namespace Example
                                                 </div>
 
 
-                                                <div class="tab-pane" id="examples-Objects-objectDetailsObjectIdGet-0-php">
+                                                <div class="tab-pane" id="examples-Notifications-notificationEmailPost-0-php">
                                                   <pre class="prettyprint"><code class="language-php">
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new io.swagger.client\Api\ObjectsApi();
-$objectId = objectId_example; // String | The object uuid
+$api_instance = new io.swagger.client\Api\NotificationsApi();
+$email = email_example; // String | The email
+$message = message_example; // String | The message to send
 
 try {
-    $api_instance->objectDetailsObjectIdGet($objectId);
+    $api_instance->notificationEmailPost($email, $message);
 } catch (Exception $e) {
-    echo 'Exception when calling ObjectsApi->objectDetailsObjectIdGet: ', $e->getMessage(), PHP_EOL;
-}
-
-                                                  </code></pre>
-          </div>
-
-                                            </div>
-
-
-
-
-
-                                            <h2>Parameters</h2>
-
-
-
-                                                <div class="methodsubtabletitle">Path parameters</div>
-                                                <table id="methodsubtable">
-                                                    <tr>
-                                                        <th width="150px">Name</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                    <!---->
-                                                        <tr><td style="width:150px;">objectId*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "object_id",
-  "in" : "path",
-  "description" : "The object uuid",
-  "required" : true,
-  "type" : "string"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_objectDetailsObjectIdGet_objectId');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_objectDetailsObjectIdGet_objectId"></div>
-</td>
-</tr>
-
-                                                </table>
-
-
-
-
-
-
-                                            <h2>Responses</h2>
-
-                                                <h3> Status: 200 - The list of details for a given object </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectDetailsObjectIdGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectDetailsObjectIdGet-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectDetailsObjectIdGet-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "The list of details for a given object"
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectDetailsObjectIdGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectDetailsObjectIdGet-schema-200');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectDetailsObjectIdGet-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-                                                <h3> Status: 0 - Unexpected error </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectDetailsObjectIdGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectDetailsObjectIdGet-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectDetailsObjectIdGet-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectDetailsObjectIdGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectDetailsObjectIdGet-schema-0');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectDetailsObjectIdGet-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-                                        </article>
-
-                                    </div>
-
-                                    <hr>
-
-
-
-
-
-
-
-
-                                    <div id="api-Objects-objectListIdentifierGet">
-
-                                        <article id="api-Objects-objectListIdentifierGet-0" data-group="User" data-name="objectListIdentifierGet" data-version="0">
-                                            <div class="pull-left">
-                                                <h1>objectListIdentifierGet</h1>
-                                                <p>For a given identifier, list of objects that were created</p>
-                                            </div>
-                                            <div class="pull-right">
-
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                            <p></p>
-                                            <p class="marked">For a given identifier, this endpoint will show the list of objects that one identifier created</p>
-                                            <p></p>
-                                            <br />
-
-                                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/object/list/{identifier}</span></code></pre>
-
-                                            <p>
-                                                <h3>Usage and SDK Samples</h3>
-                                            </p>
-
-                                            <ul class="nav nav-tabs nav-tabs-examples">
-                                                <li class="active">
-                                                    <a href="#examples-Objects-objectListIdentifierGet-0-curl">Curl</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Objects-objectListIdentifierGet-0-java">Java</a>
-            </li>
-            <li class="">
-              <a href="#examples-Objects-objectListIdentifierGet-0-android">Android</a>
-            </li>
-            <!--<li class="">
-              <a href="#examples-Objects-objectListIdentifierGet-0-groovy">Groovy</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectListIdentifierGet-0-objc">Obj-C</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectListIdentifierGet-0-javascript">JavaScript</a>
-                                                </li>
-                                                <!--<li class="">
-              <a href="#examples-Objects-objectListIdentifierGet-0-angular">Angular</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectListIdentifierGet-0-csharp">C#</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Objects-objectListIdentifierGet-0-php">PHP</a>
-            </li>
-                                            </ul>
-
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Objects-objectListIdentifierGet-0-curl">
-                                                    <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">get</span> "https://tracker.es.com/api/v1/object/list/{identifier}"
-
-
-</code></pre>
-                                                </div>
-
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-java">
-                                                  <pre class="prettyprint"><code class="language-java">
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import .ObjectsApi;
-
-import java.io.File;
-import java.util.*;
-
-public class ObjectsApiExample {
-
-    public static void main(String[] args) {
-        
-        ObjectsApi apiInstance = new ObjectsApi();
-        String identifier = identifier_example; // String | The identifier uuid
-        try {
-            apiInstance.objectListIdentifierGet(identifier);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectListIdentifierGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-android">
-                                                  <pre class="prettyprint"><code class="language-java">
-import .ObjectsApi;
-
-public class ObjectsApiExample {
-
-    public static void main(String[] args) {
-        ObjectsApi apiInstance = new ObjectsApi();
-        String identifier = identifier_example; // String | The identifier uuid
-        try {
-            apiInstance.objectListIdentifierGet(identifier);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectListIdentifierGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-          <!--
-          <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-groovy">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div> -->
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-objc">
-                                                    <pre class="prettyprint"><code class="language-cpp">
-
-String *identifier = identifier_example; // The identifier uuid
-
-ObjectsApi *apiInstance = [[ObjectsApi alloc] init];
-
-// For a given identifier, list of objects that were created
-[apiInstance objectListIdentifierGetWith:identifier
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-
-                                                    </code></pre>
-                                                </div>
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-javascript">
-                                                    <pre class="prettyprint"><code class="language-js">
-var  = require('');
-
-var api = new .ObjectsApi()
-
-var identifier = identifier_example; // {String} The identifier uuid
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.objectListIdentifierGet(identifier, callback);
-
-                                                    </code></pre>
-                                                </div>
-
-                                                <!--<div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-angular">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div>-->
-
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-csharp">
-                                                    <pre class="prettyprint"><code class="language-cs">
-using System;
-using System.Diagnostics;
-using .Api;
-using .Client;
-using ;
-
-namespace Example
-{
-    public class objectListIdentifierGetExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new ObjectsApi();
-            var identifier = identifier_example;  // String | The identifier uuid
-
-            try
-            {
-                // For a given identifier, list of objects that were created
-                apiInstance.objectListIdentifierGet(identifier);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ObjectsApi.objectListIdentifierGet: " + e.Message );
-            }
-        }
-    }
-}
-
-                                                    </code></pre>
-                                                </div>
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectListIdentifierGet-0-php">
-                                                  <pre class="prettyprint"><code class="language-php">
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new io.swagger.client\Api\ObjectsApi();
-$identifier = identifier_example; // String | The identifier uuid
-
-try {
-    $api_instance->objectListIdentifierGet($identifier);
-} catch (Exception $e) {
-    echo 'Exception when calling ObjectsApi->objectListIdentifierGet: ', $e->getMessage(), PHP_EOL;
-}
-
-                                                  </code></pre>
-          </div>
-
-                                            </div>
-
-
-
-
-
-                                            <h2>Parameters</h2>
-
-
-
-                                                <div class="methodsubtabletitle">Path parameters</div>
-                                                <table id="methodsubtable">
-                                                    <tr>
-                                                        <th width="150px">Name</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                    <!---->
-                                                        <tr><td style="width:150px;">identifier*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "identifier",
-  "in" : "path",
-  "description" : "The identifier uuid",
-  "required" : true,
-  "type" : "string"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_objectListIdentifierGet_identifier');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_objectListIdentifierGet_identifier"></div>
-</td>
-</tr>
-
-                                                </table>
-
-
-
-
-
-
-                                            <h2>Responses</h2>
-
-                                                <h3> Status: 200 - The list of object for a given identifier </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectListIdentifierGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectListIdentifierGet-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectListIdentifierGet-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "The list of object for a given identifier"
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectListIdentifierGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectListIdentifierGet-schema-200');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectListIdentifierGet-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-                                                <h3> Status: 0 - Unexpected error </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectListIdentifierGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectListIdentifierGet-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectListIdentifierGet-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectListIdentifierGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectListIdentifierGet-schema-0');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectListIdentifierGet-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-                                        </article>
-
-                                    </div>
-
-                                    <hr>
-
-
-
-
-
-
-
-
-                                    <div id="api-Objects-objectNewPost">
-
-                                        <article id="api-Objects-objectNewPost-0" data-group="User" data-name="objectNewPost" data-version="0">
-                                            <div class="pull-left">
-                                                <h1>objectNewPost</h1>
-                                                <p>Create a object in the system for the identifier</p>
-                                            </div>
-                                            <div class="pull-right">
-
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                            <p></p>
-                                            <p class="marked">This endpoint will create a object for a given identifier</p>
-                                            <p></p>
-                                            <br />
-
-                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/object/new</span></code></pre>
-
-                                            <p>
-                                                <h3>Usage and SDK Samples</h3>
-                                            </p>
-
-                                            <ul class="nav nav-tabs nav-tabs-examples">
-                                                <li class="active">
-                                                    <a href="#examples-Objects-objectNewPost-0-curl">Curl</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Objects-objectNewPost-0-java">Java</a>
-            </li>
-            <li class="">
-              <a href="#examples-Objects-objectNewPost-0-android">Android</a>
-            </li>
-            <!--<li class="">
-              <a href="#examples-Objects-objectNewPost-0-groovy">Groovy</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectNewPost-0-objc">Obj-C</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectNewPost-0-javascript">JavaScript</a>
-                                                </li>
-                                                <!--<li class="">
-              <a href="#examples-Objects-objectNewPost-0-angular">Angular</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Objects-objectNewPost-0-csharp">C#</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Objects-objectNewPost-0-php">PHP</a>
-            </li>
-                                            </ul>
-
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Objects-objectNewPost-0-curl">
-                                                    <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/object/new?identifier=&name=&url="
-
-
-</code></pre>
-                                                </div>
-
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-java">
-                                                  <pre class="prettyprint"><code class="language-java">
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import .ObjectsApi;
-
-import java.io.File;
-import java.util.*;
-
-public class ObjectsApiExample {
-
-    public static void main(String[] args) {
-        
-        ObjectsApi apiInstance = new ObjectsApi();
-        UUID identifier = identifier_example; // UUID | The identifier uuid that wants this project
-        String name = name_example; // String | The object name
-        String url = url_example; // String | The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction
-        try {
-            apiInstance.objectNewPost(identifier, name, url);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectNewPost");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-android">
-                                                  <pre class="prettyprint"><code class="language-java">
-import .ObjectsApi;
-
-public class ObjectsApiExample {
-
-    public static void main(String[] args) {
-        ObjectsApi apiInstance = new ObjectsApi();
-        UUID identifier = identifier_example; // UUID | The identifier uuid that wants this project
-        String name = name_example; // String | The object name
-        String url = url_example; // String | The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction
-        try {
-            apiInstance.objectNewPost(identifier, name, url);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ObjectsApi#objectNewPost");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-          <!--
-          <div class="tab-pane" id="examples-Objects-objectNewPost-0-groovy">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div> -->
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-objc">
-                                                    <pre class="prettyprint"><code class="language-cpp">
-
-UUID *identifier = identifier_example; // The identifier uuid that wants this project (optional)
-String *name = name_example; // The object name (optional)
-String *url = url_example; // The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction (optional)
-
-ObjectsApi *apiInstance = [[ObjectsApi alloc] init];
-
-// Create a object in the system for the identifier
-[apiInstance objectNewPostWith:identifier
-    name:name
-    url:url
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-
-                                                    </code></pre>
-                                                </div>
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-javascript">
-                                                    <pre class="prettyprint"><code class="language-js">
-var  = require('');
-
-var api = new .ObjectsApi()
-
-var opts = { 
-  'identifier': identifier_example, // {UUID} The identifier uuid that wants this project
-  'name': name_example, // {String} The object name
-  'url': url_example // {String} The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.objectNewPost(opts, callback);
-
-                                                    </code></pre>
-                                                </div>
-
-                                                <!--<div class="tab-pane" id="examples-Objects-objectNewPost-0-angular">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div>-->
-
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-csharp">
-                                                    <pre class="prettyprint"><code class="language-cs">
-using System;
-using System.Diagnostics;
-using .Api;
-using .Client;
-using ;
-
-namespace Example
-{
-    public class objectNewPostExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new ObjectsApi();
-            var identifier = identifier_example;  // UUID | The identifier uuid that wants this project (optional) 
-            var name = name_example;  // String | The object name (optional) 
-            var url = url_example;  // String | The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction (optional) 
-
-            try
-            {
-                // Create a object in the system for the identifier
-                apiInstance.objectNewPost(identifier, name, url);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ObjectsApi.objectNewPost: " + e.Message );
-            }
-        }
-    }
-}
-
-                                                    </code></pre>
-                                                </div>
-
-
-                                                <div class="tab-pane" id="examples-Objects-objectNewPost-0-php">
-                                                  <pre class="prettyprint"><code class="language-php">
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new io.swagger.client\Api\ObjectsApi();
-$identifier = identifier_example; // UUID | The identifier uuid that wants this project
-$name = name_example; // String | The object name
-$url = url_example; // String | The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction
-
-try {
-    $api_instance->objectNewPost($identifier, $name, $url);
-} catch (Exception $e) {
-    echo 'Exception when calling ObjectsApi->objectNewPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationsApi->notificationEmailPost: ', $e->getMessage(), PHP_EOL;
 }
 
                                                   </code></pre>
@@ -1975,530 +1047,18 @@ try {
                                                         <th>Description</th>
                                                     </tr>
                                                     <!---->
-                                                        <tr><td style="width:150px;">identifier</td>
+                                                        <tr><td style="width:150px;">email*</td>
 <td>
 
 
 <script>
 												$(document).ready(function() {
 													var schemaWrapper = {
-  "name" : "identifier",
+  "name" : "email",
   "in" : "query",
-  "description" : "The identifier uuid that wants this project",
-  "required" : false,
-  "type" : "string",
-  "format" : "uuid"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_objectNewPost_identifier');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_objectNewPost_identifier"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">name</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "name",
-  "in" : "query",
-  "description" : "The object name",
-  "required" : false,
-  "type" : "string"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_objectNewPost_name');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_objectNewPost_name"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">url</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "url",
-  "in" : "query",
-  "description" : "The object state, a small text explain the state of the object, this is important for certify the object or if there is a problem with the transaction",
-  "required" : false,
-  "type" : "string"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_objectNewPost_url');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_objectNewPost_url"></div>
-</td>
-</tr>
-
-                                                </table>
-
-                                            <h2>Responses</h2>
-
-                                                <h3> Status: 200 - The object id </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectNewPost-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectNewPost-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectNewPost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "The object id"
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectNewPost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectNewPost-schema-200');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectNewPost-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-                                                <h3> Status: 0 - Unexpected error </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Objects-objectNewPost-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Objects-objectNewPost-schema">
-
-
-
-
-                                                        <div id='examples-Objects-objectNewPost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Objects-objectNewPost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Objects-objectNewPost-schema-0');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Objects-objectNewPost-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-                                        </article>
-
-                                    </div>
-
-                                    <hr>
-
-                            </section>
-
-                            <section id="api-Transactions">
-                                <h1>Transactions</h1>
-
-
-
-
-
-
-
-                                    <div id="api-Transactions-transactionDetailsIdGet">
-
-                                        <article id="api-Transactions-transactionDetailsIdGet-0" data-group="User" data-name="transactionDetailsIdGet" data-version="0">
-                                            <div class="pull-left">
-                                                <h1>transactionDetailsIdGet</h1>
-                                                <p>Get details about the transaction of one object between a identifier and a identifier</p>
-                                            </div>
-                                            <div class="pull-right">
-
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                            <p></p>
-                                            <p class="marked">This endpoint returns the state of a given transaction for an object that is bought by a identifier and a identifier.
-</p>
-                                            <p></p>
-                                            <br />
-
-                                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/transaction/details/{id}/</span></code></pre>
-
-                                            <p>
-                                                <h3>Usage and SDK Samples</h3>
-                                            </p>
-
-                                            <ul class="nav nav-tabs nav-tabs-examples">
-                                                <li class="active">
-                                                    <a href="#examples-Transactions-transactionDetailsIdGet-0-curl">Curl</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionDetailsIdGet-0-java">Java</a>
-            </li>
-            <li class="">
-              <a href="#examples-Transactions-transactionDetailsIdGet-0-android">Android</a>
-            </li>
-            <!--<li class="">
-              <a href="#examples-Transactions-transactionDetailsIdGet-0-groovy">Groovy</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionDetailsIdGet-0-objc">Obj-C</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionDetailsIdGet-0-javascript">JavaScript</a>
-                                                </li>
-                                                <!--<li class="">
-              <a href="#examples-Transactions-transactionDetailsIdGet-0-angular">Angular</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionDetailsIdGet-0-csharp">C#</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionDetailsIdGet-0-php">PHP</a>
-            </li>
-                                            </ul>
-
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Transactions-transactionDetailsIdGet-0-curl">
-                                                    <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">get</span> "https://tracker.es.com/api/v1/transaction/details/{id}/"
-
-
-</code></pre>
-                                                </div>
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-java">
-                                                  <pre class="prettyprint"><code class="language-java">
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import .TransactionsApi;
-
-import java.io.File;
-import java.util.*;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        
-        TransactionsApi apiInstance = new TransactionsApi();
-        BigDecimal id = 3.4; // BigDecimal | ID of the transaction in our system.
-        try {
-            apiInstance.transactionDetailsIdGet(id);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionDetailsIdGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-android">
-                                                  <pre class="prettyprint"><code class="language-java">
-import .TransactionsApi;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        TransactionsApi apiInstance = new TransactionsApi();
-        BigDecimal id = 3.4; // BigDecimal | ID of the transaction in our system.
-        try {
-            apiInstance.transactionDetailsIdGet(id);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionDetailsIdGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-          <!--
-          <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-groovy">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div> -->
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-objc">
-                                                    <pre class="prettyprint"><code class="language-cpp">
-
-BigDecimal *id = 3.4; // ID of the transaction in our system.
-
-TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
-
-// Get details about the transaction of one object between a identifier and a identifier
-[apiInstance transactionDetailsIdGetWith:id
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-
-                                                    </code></pre>
-                                                </div>
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-javascript">
-                                                    <pre class="prettyprint"><code class="language-js">
-var  = require('');
-
-var api = new .TransactionsApi()
-
-var id = 3.4; // {BigDecimal} ID of the transaction in our system.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.transactionDetailsIdGet(id, callback);
-
-                                                    </code></pre>
-                                                </div>
-
-                                                <!--<div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-angular">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div>-->
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-csharp">
-                                                    <pre class="prettyprint"><code class="language-cs">
-using System;
-using System.Diagnostics;
-using .Api;
-using .Client;
-using ;
-
-namespace Example
-{
-    public class transactionDetailsIdGetExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new TransactionsApi();
-            var id = 3.4;  // BigDecimal | ID of the transaction in our system.
-
-            try
-            {
-                // Get details about the transaction of one object between a identifier and a identifier
-                apiInstance.transactionDetailsIdGet(id);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TransactionsApi.transactionDetailsIdGet: " + e.Message );
-            }
-        }
-    }
-}
-
-                                                    </code></pre>
-                                                </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionDetailsIdGet-0-php">
-                                                  <pre class="prettyprint"><code class="language-php">
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new io.swagger.client\Api\TransactionsApi();
-$id = 3.4; // BigDecimal | ID of the transaction in our system.
-
-try {
-    $api_instance->transactionDetailsIdGet($id);
-} catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionDetailsIdGet: ', $e->getMessage(), PHP_EOL;
-}
-
-                                                  </code></pre>
-          </div>
-
-                                            </div>
-
-
-
-
-
-                                            <h2>Parameters</h2>
-
-
-
-                                                <div class="methodsubtabletitle">Path parameters</div>
-                                                <table id="methodsubtable">
-                                                    <tr>
-                                                        <th width="150px">Name</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                    <!---->
-                                                        <tr><td style="width:150px;">id*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "id",
-  "in" : "path",
-  "description" : "ID of the transaction in our system.",
+  "description" : "The email",
   "required" : true,
-  "type" : "number",
-  "format" : "string"
+  "type" : "string"
 };
 													var schema = schemaWrapper;
 
@@ -2506,7 +1066,7 @@ try {
 
 
 													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionDetailsIdGet_id');
+													var result = $('#d2e199_notificationEmailPost_email');
 													result.empty();
 													result.append(view.render());
 
@@ -2516,25 +1076,53 @@ try {
 
 												});
 												</script>
-												<div id="d2e199_transactionDetailsIdGet_id"></div>
+												<div id="d2e199_notificationEmailPost_email"></div>
+</td>
+</tr>
+
+                                                        <tr><td style="width:150px;">message*</td>
+<td>
+
+
+<script>
+												$(document).ready(function() {
+													var schemaWrapper = {
+  "name" : "message",
+  "in" : "query",
+  "description" : "The message to send",
+  "required" : true,
+  "type" : "string"
+};
+													var schema = schemaWrapper;
+
+
+
+
+													var view = new JSONSchemaView(schema,0);
+													var result = $('#d2e199_notificationEmailPost_message');
+													result.empty();
+													result.append(view.render());
+
+
+
+
+
+												});
+												</script>
+												<div id="d2e199_notificationEmailPost_message"></div>
 </td>
 </tr>
 
                                                 </table>
 
-
-
-
-
-
                                             <h2>Responses</h2>
 
-                                                <h3> Status: 200 - A json object with the state of the transaction </h3>
+                                                <h3> Status: 200 - The notification id in our system </h3>
 
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionDetailsIdGet-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationEmailPost-schema">Schema</a>
                                                     </li>
 
 
@@ -2550,17 +1138,17 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionDetailsIdGet-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationEmailPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionDetailsIdGet-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationEmailPost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
                                                                     var schemaWrapper = {
-  "description" : "A json object with the state of the transaction"
+  "description" : "The notification id in our system"
 };
                                                                     var schema = schemaWrapper.schema;
                                                                     schemaWrapper.definitions = defs;
@@ -2576,8 +1164,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionDetailsIdGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionDetailsIdGet-schema-200');
+                                                                        $('#examples-Notifications-notificationEmailPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationEmailPost-schema-200');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -2588,7 +1176,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionDetailsIdGet-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationEmailPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -2610,7 +1198,7 @@ try {
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionDetailsIdGet-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationEmailPost-schema">Schema</a>
                                                     </li>
 
 
@@ -2626,12 +1214,12 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionDetailsIdGet-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationEmailPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionDetailsIdGet-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationEmailPost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
@@ -2655,8 +1243,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionDetailsIdGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionDetailsIdGet-schema-0');
+                                                                        $('#examples-Notifications-notificationEmailPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationEmailPost-schema-0');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -2667,7 +1255,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionDetailsIdGet-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationEmailPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -2702,12 +1290,12 @@ try {
 
 
 
-                                    <div id="api-Transactions-transactionHistoryIdentifierGet">
+                                    <div id="api-Notifications-notificationMessengerPost">
 
-                                        <article id="api-Transactions-transactionHistoryIdentifierGet-0" data-group="User" data-name="transactionHistoryIdentifierGet" data-version="0">
+                                        <article id="api-Notifications-notificationMessengerPost-0" data-group="User" data-name="notificationMessengerPost" data-version="0">
                                             <div class="pull-left">
-                                                <h1>transactionHistoryIdentifierGet</h1>
-                                                <p>For a given identifier return the list of transactions of that identifier in the past</p>
+                                                <h1>notificationMessengerPost</h1>
+                                                <p>Create a notification, destination which can be different, for this endpoint will be Messenger notification</p>
                                             </div>
                                             <div class="pull-right">
 
@@ -2715,11 +1303,11 @@ try {
                                             <div class="clearfix"></div>
 
                                             <p></p>
-                                            <p class="marked">This endpoint returns the list of transactions made in the past by a given identifier, as a identifier or identifier and the stats of that transactions.</p>
+                                            <p class="marked">This endpoint will send a message for an especific FB Account/ NUMBER</p>
                                             <p></p>
                                             <br />
 
-                                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/transaction/history/{identifier}/</span></code></pre>
+                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/notification/messenger/</span></code></pre>
 
                                             <p>
                                                 <h3>Usage and SDK Samples</h3>
@@ -2727,63 +1315,64 @@ try {
 
                                             <ul class="nav nav-tabs nav-tabs-examples">
                                                 <li class="active">
-                                                    <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-curl">Curl</a>
+                                                    <a href="#examples-Notifications-notificationMessengerPost-0-curl">Curl</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-java">Java</a>
+              <a href="#examples-Notifications-notificationMessengerPost-0-java">Java</a>
             </li>
             <li class="">
-              <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-android">Android</a>
+              <a href="#examples-Notifications-notificationMessengerPost-0-android">Android</a>
             </li>
             <!--<li class="">
-              <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-groovy">Groovy</a>
+              <a href="#examples-Notifications-notificationMessengerPost-0-groovy">Groovy</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-objc">Obj-C</a>
+                                                    <a href="#examples-Notifications-notificationMessengerPost-0-objc">Obj-C</a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-javascript">JavaScript</a>
+                                                    <a href="#examples-Notifications-notificationMessengerPost-0-javascript">JavaScript</a>
                                                 </li>
                                                 <!--<li class="">
-              <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-angular">Angular</a>
+              <a href="#examples-Notifications-notificationMessengerPost-0-angular">Angular</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-csharp">C#</a>
+                                                    <a href="#examples-Notifications-notificationMessengerPost-0-csharp">C#</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Transactions-transactionHistoryIdentifierGet-0-php">PHP</a>
+              <a href="#examples-Notifications-notificationMessengerPost-0-php">PHP</a>
             </li>
                                             </ul>
 
                                             <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Transactions-transactionHistoryIdentifierGet-0-curl">
+                                                <div class="tab-pane active" id="examples-Notifications-notificationMessengerPost-0-curl">
                                                     <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">get</span> "https://tracker.es.com/api/v1/transaction/history/{identifier}/?identifier="
+curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/notification/messenger/?phoneNumber=&message="
 
 
 </code></pre>
                                                 </div>
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-java">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-java">
                                                   <pre class="prettyprint"><code class="language-java">
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import .TransactionsApi;
+import .NotificationsApi;
 
 import java.io.File;
 import java.util.*;
 
-public class TransactionsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
         
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID identifier = identifier_example; // UUID | The identifier uuid
+        NotificationsApi apiInstance = new NotificationsApi();
+        String phoneNumber = phoneNumber_example; // String | The user phone number
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.transactionHistoryIdentifierGet(identifier);
+            apiInstance.notificationMessengerPost(phoneNumber, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionHistoryIdentifierGet");
+            System.err.println("Exception when calling NotificationsApi#notificationMessengerPost");
             e.printStackTrace();
         }
     }
@@ -2793,19 +1382,20 @@ public class TransactionsApiExample {
           </div>
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-android">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-android">
                                                   <pre class="prettyprint"><code class="language-java">
-import .TransactionsApi;
+import .NotificationsApi;
 
-public class TransactionsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID identifier = identifier_example; // UUID | The identifier uuid
+        NotificationsApi apiInstance = new NotificationsApi();
+        String phoneNumber = phoneNumber_example; // String | The user phone number
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.transactionHistoryIdentifierGet(identifier);
+            apiInstance.notificationMessengerPost(phoneNumber, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionHistoryIdentifierGet");
+            System.err.println("Exception when calling NotificationsApi#notificationMessengerPost");
             e.printStackTrace();
         }
     }
@@ -2815,20 +1405,22 @@ public class TransactionsApiExample {
           </div>
 
           <!--
-          <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-groovy">
+          <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-groovy">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div> -->
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-objc">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-objc">
                                                     <pre class="prettyprint"><code class="language-cpp">
 
-UUID *identifier = identifier_example; // The identifier uuid (optional)
+String *phoneNumber = phoneNumber_example; // The user phone number
+String *message = message_example; // The message to send
 
-TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
+NotificationsApi *apiInstance = [[NotificationsApi alloc] init];
 
-// For a given identifier return the list of transactions of that identifier in the past
-[apiInstance transactionHistoryIdentifierGetWith:identifier
+// Create a notification, destination which can be different, for this endpoint will be Messenger notification
+[apiInstance notificationMessengerPostWith:phoneNumber
+    message:message
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -2837,15 +1429,16 @@ TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
 
                                                     </code></pre>
                                                 </div>
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-javascript">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-javascript">
                                                     <pre class="prettyprint"><code class="language-js">
 var  = require('');
 
-var api = new .TransactionsApi()
+var api = new .NotificationsApi()
 
-var opts = { 
-  'identifier': identifier_example // {UUID} The identifier uuid
-};
+var phoneNumber = phoneNumber_example; // {String} The user phone number
+
+var message = message_example; // {String} The message to send
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -2854,16 +1447,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.transactionHistoryIdentifierGet(opts, callback);
+api.notificationMessengerPost(phoneNumber, message, callback);
 
                                                     </code></pre>
                                                 </div>
 
-                                                <!--<div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-angular">
+                                                <!--<div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-angular">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div>-->
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-csharp">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-csharp">
                                                     <pre class="prettyprint"><code class="language-cs">
 using System;
 using System.Diagnostics;
@@ -2873,22 +1466,23 @@ using ;
 
 namespace Example
 {
-    public class transactionHistoryIdentifierGetExample
+    public class notificationMessengerPostExample
     {
         public void main()
         {
             
-            var apiInstance = new TransactionsApi();
-            var identifier = identifier_example;  // UUID | The identifier uuid (optional) 
+            var apiInstance = new NotificationsApi();
+            var phoneNumber = phoneNumber_example;  // String | The user phone number
+            var message = message_example;  // String | The message to send
 
             try
             {
-                // For a given identifier return the list of transactions of that identifier in the past
-                apiInstance.transactionHistoryIdentifierGet(identifier);
+                // Create a notification, destination which can be different, for this endpoint will be Messenger notification
+                apiInstance.notificationMessengerPost(phoneNumber, message);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TransactionsApi.transactionHistoryIdentifierGet: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.notificationMessengerPost: " + e.Message );
             }
         }
     }
@@ -2898,18 +1492,19 @@ namespace Example
                                                 </div>
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionHistoryIdentifierGet-0-php">
+                                                <div class="tab-pane" id="examples-Notifications-notificationMessengerPost-0-php">
                                                   <pre class="prettyprint"><code class="language-php">
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new io.swagger.client\Api\TransactionsApi();
-$identifier = identifier_example; // UUID | The identifier uuid
+$api_instance = new io.swagger.client\Api\NotificationsApi();
+$phoneNumber = phoneNumber_example; // String | The user phone number
+$message = message_example; // String | The message to send
 
 try {
-    $api_instance->transactionHistoryIdentifierGet($identifier);
+    $api_instance->notificationMessengerPost($phoneNumber, $message);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionHistoryIdentifierGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationsApi->notificationMessengerPost: ', $e->getMessage(), PHP_EOL;
 }
 
                                                   </code></pre>
@@ -2937,19 +1532,18 @@ try {
                                                         <th>Description</th>
                                                     </tr>
                                                     <!---->
-                                                        <tr><td style="width:150px;">identifier</td>
+                                                        <tr><td style="width:150px;">phoneNumber*</td>
 <td>
 
 
 <script>
 												$(document).ready(function() {
 													var schemaWrapper = {
-  "name" : "identifier",
+  "name" : "phone_number",
   "in" : "query",
-  "description" : "The identifier uuid",
-  "required" : false,
-  "type" : "string",
-  "format" : "uuid"
+  "description" : "The user phone number",
+  "required" : true,
+  "type" : "string"
 };
 													var schema = schemaWrapper;
 
@@ -2957,7 +1551,7 @@ try {
 
 
 													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionHistoryIdentifierGet_identifier');
+													var result = $('#d2e199_notificationMessengerPost_phoneNumber');
 													result.empty();
 													result.append(view.render());
 
@@ -2967,7 +1561,40 @@ try {
 
 												});
 												</script>
-												<div id="d2e199_transactionHistoryIdentifierGet_identifier"></div>
+												<div id="d2e199_notificationMessengerPost_phoneNumber"></div>
+</td>
+</tr>
+
+                                                        <tr><td style="width:150px;">message*</td>
+<td>
+
+
+<script>
+												$(document).ready(function() {
+													var schemaWrapper = {
+  "name" : "message",
+  "in" : "query",
+  "description" : "The message to send",
+  "required" : true,
+  "type" : "string"
+};
+													var schema = schemaWrapper;
+
+
+
+
+													var view = new JSONSchemaView(schema,0);
+													var result = $('#d2e199_notificationMessengerPost_message');
+													result.empty();
+													result.append(view.render());
+
+
+
+
+
+												});
+												</script>
+												<div id="d2e199_notificationMessengerPost_message"></div>
 </td>
 </tr>
 
@@ -2975,12 +1602,12 @@ try {
 
                                             <h2>Responses</h2>
 
-                                                <h3> Status: 200 - History information for the given identifier </h3>
+                                                <h3> Status: 200 - Current state </h3>
 
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionHistoryIdentifierGet-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationMessengerPost-schema">Schema</a>
                                                     </li>
 
 
@@ -2996,17 +1623,17 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionHistoryIdentifierGet-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationMessengerPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionHistoryIdentifierGet-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationMessengerPost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
                                                                     var schemaWrapper = {
-  "description" : "History information for the given identifier"
+  "description" : "Current state"
 };
                                                                     var schema = schemaWrapper.schema;
                                                                     schemaWrapper.definitions = defs;
@@ -3022,8 +1649,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionHistoryIdentifierGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionHistoryIdentifierGet-schema-200');
+                                                                        $('#examples-Notifications-notificationMessengerPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationMessengerPost-schema-200');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -3034,7 +1661,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionHistoryIdentifierGet-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationMessengerPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -3056,7 +1683,7 @@ try {
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionHistoryIdentifierGet-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationMessengerPost-schema">Schema</a>
                                                     </li>
 
 
@@ -3072,12 +1699,12 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionHistoryIdentifierGet-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationMessengerPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionHistoryIdentifierGet-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationMessengerPost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
@@ -3101,8 +1728,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionHistoryIdentifierGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionHistoryIdentifierGet-schema-0');
+                                                                        $('#examples-Notifications-notificationMessengerPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationMessengerPost-schema-0');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -3113,7 +1740,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionHistoryIdentifierGet-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationMessengerPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -3148,12 +1775,12 @@ try {
 
 
 
-                                    <div id="api-Transactions-transactionNewPost">
+                                    <div id="api-Notifications-notificationSmsPost">
 
-                                        <article id="api-Transactions-transactionNewPost-0" data-group="User" data-name="transactionNewPost" data-version="0">
+                                        <article id="api-Notifications-notificationSmsPost-0" data-group="User" data-name="notificationSmsPost" data-version="0">
                                             <div class="pull-left">
-                                                <h1>transactionNewPost</h1>
-                                                <p>Add a transaction between a identifier and a identifier for a given object</p>
+                                                <h1>notificationSmsPost</h1>
+                                                <p>Create a notification, destination which can be different, for this endpoint will be SMS</p>
                                             </div>
                                             <div class="pull-right">
 
@@ -3161,11 +1788,11 @@ try {
                                             <div class="clearfix"></div>
 
                                             <p></p>
-                                            <p class="marked">Creates a transaction for a given object that is part of a transaction between a identifier and a identifier</p>
+                                            <p class="marked">This endpoint will send an SMS for an especific NUMBER</p>
                                             <p></p>
                                             <br />
 
-                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/transaction/new/</span></code></pre>
+                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/notification/sms/</span></code></pre>
 
                                             <p>
                                                 <h3>Usage and SDK Samples</h3>
@@ -3173,67 +1800,64 @@ try {
 
                                             <ul class="nav nav-tabs nav-tabs-examples">
                                                 <li class="active">
-                                                    <a href="#examples-Transactions-transactionNewPost-0-curl">Curl</a>
+                                                    <a href="#examples-Notifications-notificationSmsPost-0-curl">Curl</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Transactions-transactionNewPost-0-java">Java</a>
+              <a href="#examples-Notifications-notificationSmsPost-0-java">Java</a>
             </li>
             <li class="">
-              <a href="#examples-Transactions-transactionNewPost-0-android">Android</a>
+              <a href="#examples-Notifications-notificationSmsPost-0-android">Android</a>
             </li>
             <!--<li class="">
-              <a href="#examples-Transactions-transactionNewPost-0-groovy">Groovy</a>
+              <a href="#examples-Notifications-notificationSmsPost-0-groovy">Groovy</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionNewPost-0-objc">Obj-C</a>
+                                                    <a href="#examples-Notifications-notificationSmsPost-0-objc">Obj-C</a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionNewPost-0-javascript">JavaScript</a>
+                                                    <a href="#examples-Notifications-notificationSmsPost-0-javascript">JavaScript</a>
                                                 </li>
                                                 <!--<li class="">
-              <a href="#examples-Transactions-transactionNewPost-0-angular">Angular</a>
+              <a href="#examples-Notifications-notificationSmsPost-0-angular">Angular</a>
             </li>-->
                                                 <li class="">
-                                                    <a href="#examples-Transactions-transactionNewPost-0-csharp">C#</a>
+                                                    <a href="#examples-Notifications-notificationSmsPost-0-csharp">C#</a>
                                                 </li>
                                                 <li class="">
-              <a href="#examples-Transactions-transactionNewPost-0-php">PHP</a>
+              <a href="#examples-Notifications-notificationSmsPost-0-php">PHP</a>
             </li>
                                             </ul>
 
                                             <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Transactions-transactionNewPost-0-curl">
+                                                <div class="tab-pane active" id="examples-Notifications-notificationSmsPost-0-curl">
                                                     <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/transaction/new/?toUuid=&fromUuid=&objectUuid=&price=&state="
+curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/notification/sms/?phoneNumber=&message="
 
 
 </code></pre>
                                                 </div>
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-java">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-java">
                                                   <pre class="prettyprint"><code class="language-java">
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import .TransactionsApi;
+import .NotificationsApi;
 
 import java.io.File;
 import java.util.*;
 
-public class TransactionsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
         
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID toUuid = toUuid_example; // UUID | The to uuid
-        UUID fromUuid = fromUuid_example; // UUID | The from uuid
-        UUID objectUuid = objectUuid_example; // UUID | The object id in the system
-        String state = state_example; // String | The transaction state
-        Float price = 3.4; // Float | The object price
+        NotificationsApi apiInstance = new NotificationsApi();
+        String phoneNumber = phoneNumber_example; // String | The number
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.transactionNewPost(toUuid, fromUuid, objectUuid, state, price);
+            apiInstance.notificationSmsPost(phoneNumber, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionNewPost");
+            System.err.println("Exception when calling NotificationsApi#notificationSmsPost");
             e.printStackTrace();
         }
     }
@@ -3243,23 +1867,20 @@ public class TransactionsApiExample {
           </div>
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-android">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-android">
                                                   <pre class="prettyprint"><code class="language-java">
-import .TransactionsApi;
+import .NotificationsApi;
 
-public class TransactionsApiExample {
+public class NotificationsApiExample {
 
     public static void main(String[] args) {
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID toUuid = toUuid_example; // UUID | The to uuid
-        UUID fromUuid = fromUuid_example; // UUID | The from uuid
-        UUID objectUuid = objectUuid_example; // UUID | The object id in the system
-        String state = state_example; // String | The transaction state
-        Float price = 3.4; // Float | The object price
+        NotificationsApi apiInstance = new NotificationsApi();
+        String phoneNumber = phoneNumber_example; // String | The number
+        String message = message_example; // String | The message to send
         try {
-            apiInstance.transactionNewPost(toUuid, fromUuid, objectUuid, state, price);
+            apiInstance.notificationSmsPost(phoneNumber, message);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionNewPost");
+            System.err.println("Exception when calling NotificationsApi#notificationSmsPost");
             e.printStackTrace();
         }
     }
@@ -3269,28 +1890,22 @@ public class TransactionsApiExample {
           </div>
 
           <!--
-          <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-groovy">
+          <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-groovy">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div> -->
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-objc">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-objc">
                                                     <pre class="prettyprint"><code class="language-cpp">
 
-UUID *toUuid = toUuid_example; // The to uuid
-UUID *fromUuid = fromUuid_example; // The from uuid
-UUID *objectUuid = objectUuid_example; // The object id in the system
-String *state = state_example; // The transaction state
-Float *price = 3.4; // The object price (optional)
+String *phoneNumber = phoneNumber_example; // The number
+String *message = message_example; // The message to send
 
-TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
+NotificationsApi *apiInstance = [[NotificationsApi alloc] init];
 
-// Add a transaction between a identifier and a identifier for a given object
-[apiInstance transactionNewPostWith:toUuid
-    fromUuid:fromUuid
-    objectUuid:objectUuid
-    state:state
-    price:price
+// Create a notification, destination which can be different, for this endpoint will be SMS
+[apiInstance notificationSmsPostWith:phoneNumber
+    message:message
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -3299,23 +1914,16 @@ TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
 
                                                     </code></pre>
                                                 </div>
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-javascript">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-javascript">
                                                     <pre class="prettyprint"><code class="language-js">
 var  = require('');
 
-var api = new .TransactionsApi()
+var api = new .NotificationsApi()
 
-var toUuid = toUuid_example; // {UUID} The to uuid
+var phoneNumber = phoneNumber_example; // {String} The number
 
-var fromUuid = fromUuid_example; // {UUID} The from uuid
+var message = message_example; // {String} The message to send
 
-var objectUuid = objectUuid_example; // {UUID} The object id in the system
-
-var state = state_example; // {String} The transaction state
-
-var opts = { 
-  'price': 3.4 // {Float} The object price
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -3324,16 +1932,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.transactionNewPost(toUuid, fromUuid, objectUuid, state, opts, callback);
+api.notificationSmsPost(phoneNumber, message, callback);
 
                                                     </code></pre>
                                                 </div>
 
-                                                <!--<div class="tab-pane" id="examples-Transactions-transactionNewPost-0-angular">
+                                                <!--<div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-angular">
             <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
           </div>-->
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-csharp">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-csharp">
                                                     <pre class="prettyprint"><code class="language-cs">
 using System;
 using System.Diagnostics;
@@ -3343,26 +1951,23 @@ using ;
 
 namespace Example
 {
-    public class transactionNewPostExample
+    public class notificationSmsPostExample
     {
         public void main()
         {
             
-            var apiInstance = new TransactionsApi();
-            var toUuid = toUuid_example;  // UUID | The to uuid
-            var fromUuid = fromUuid_example;  // UUID | The from uuid
-            var objectUuid = objectUuid_example;  // UUID | The object id in the system
-            var state = state_example;  // String | The transaction state
-            var price = 3.4;  // Float | The object price (optional) 
+            var apiInstance = new NotificationsApi();
+            var phoneNumber = phoneNumber_example;  // String | The number
+            var message = message_example;  // String | The message to send
 
             try
             {
-                // Add a transaction between a identifier and a identifier for a given object
-                apiInstance.transactionNewPost(toUuid, fromUuid, objectUuid, state, price);
+                // Create a notification, destination which can be different, for this endpoint will be SMS
+                apiInstance.notificationSmsPost(phoneNumber, message);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TransactionsApi.transactionNewPost: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.notificationSmsPost: " + e.Message );
             }
         }
     }
@@ -3372,22 +1977,19 @@ namespace Example
                                                 </div>
 
 
-                                                <div class="tab-pane" id="examples-Transactions-transactionNewPost-0-php">
+                                                <div class="tab-pane" id="examples-Notifications-notificationSmsPost-0-php">
                                                   <pre class="prettyprint"><code class="language-php">
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new io.swagger.client\Api\TransactionsApi();
-$toUuid = toUuid_example; // UUID | The to uuid
-$fromUuid = fromUuid_example; // UUID | The from uuid
-$objectUuid = objectUuid_example; // UUID | The object id in the system
-$state = state_example; // String | The transaction state
-$price = 3.4; // Float | The object price
+$api_instance = new io.swagger.client\Api\NotificationsApi();
+$phoneNumber = phoneNumber_example; // String | The number
+$message = message_example; // String | The message to send
 
 try {
-    $api_instance->transactionNewPost($toUuid, $fromUuid, $objectUuid, $state, $price);
+    $api_instance->notificationSmsPost($phoneNumber, $message);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionNewPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationsApi->notificationSmsPost: ', $e->getMessage(), PHP_EOL;
 }
 
                                                   </code></pre>
@@ -3415,152 +2017,16 @@ try {
                                                         <th>Description</th>
                                                     </tr>
                                                     <!---->
-                                                        <tr><td style="width:150px;">toUuid*</td>
+                                                        <tr><td style="width:150px;">phoneNumber*</td>
 <td>
 
 
 <script>
 												$(document).ready(function() {
 													var schemaWrapper = {
-  "name" : "to_uuid",
+  "name" : "phone_number",
   "in" : "query",
-  "description" : "The to uuid",
-  "required" : true,
-  "type" : "string",
-  "format" : "uuid"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionNewPost_toUuid');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_transactionNewPost_toUuid"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">fromUuid*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "from_uuid",
-  "in" : "query",
-  "description" : "The from uuid",
-  "required" : true,
-  "type" : "string",
-  "format" : "uuid"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionNewPost_fromUuid');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_transactionNewPost_fromUuid"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">objectUuid*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "object_uuid",
-  "in" : "query",
-  "description" : "The object id in the system",
-  "required" : true,
-  "type" : "string",
-  "format" : "uuid"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionNewPost_objectUuid');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_transactionNewPost_objectUuid"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">price</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "price",
-  "in" : "query",
-  "description" : "The object price",
-  "required" : false,
-  "type" : "number",
-  "format" : "float"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionNewPost_price');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_transactionNewPost_price"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">state*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "state",
-  "in" : "query",
-  "description" : "The transaction state",
+  "description" : "The number",
   "required" : true,
   "type" : "string"
 };
@@ -3570,7 +2036,7 @@ try {
 
 
 													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionNewPost_state');
+													var result = $('#d2e199_notificationSmsPost_phoneNumber');
 													result.empty();
 													result.append(view.render());
 
@@ -3580,473 +2046,20 @@ try {
 
 												});
 												</script>
-												<div id="d2e199_transactionNewPost_state"></div>
+												<div id="d2e199_notificationSmsPost_phoneNumber"></div>
 </td>
 </tr>
 
-                                                </table>
-
-                                            <h2>Responses</h2>
-
-                                                <h3> Status: 200 - The transaction id in our system </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Transactions-transactionNewPost-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionNewPost-schema">
-
-
-
-
-                                                        <div id='examples-Transactions-transactionNewPost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "The transaction id in our system"
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionNewPost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionNewPost-schema-200');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Transactions-transactionNewPost-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-                                                <h3> Status: 0 - Unexpected error </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Transactions-transactionNewPost-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionNewPost-schema">
-
-
-
-
-                                                        <div id='examples-Transactions-transactionNewPost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionNewPost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionNewPost-schema-0');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Transactions-transactionNewPost-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-                                        </article>
-
-                                    </div>
-
-                                    <hr>
-
-
-
-
-
-
-
-
-                                    <div id="api-Transactions-transactionStatePost">
-
-                                        <article id="api-Transactions-transactionStatePost-0" data-group="User" data-name="transactionStatePost" data-version="0">
-                                            <div class="pull-left">
-                                                <h1>transactionStatePost</h1>
-                                                <p>Change the state for a given transaction</p>
-                                            </div>
-                                            <div class="pull-right">
-
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                            <p></p>
-                                            <p class="marked">This endpoint will change the state of a given transaction between a identifier and a identifier</p>
-                                            <p></p>
-                                            <br />
-
-                                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/transaction/state</span></code></pre>
-
-                                            <p>
-                                                <h3>Usage and SDK Samples</h3>
-                                            </p>
-
-                                            <ul class="nav nav-tabs nav-tabs-examples">
-                                                <li class="active">
-                                                    <a href="#examples-Transactions-transactionStatePost-0-curl">Curl</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionStatePost-0-java">Java</a>
-            </li>
-            <li class="">
-              <a href="#examples-Transactions-transactionStatePost-0-android">Android</a>
-            </li>
-            <!--<li class="">
-              <a href="#examples-Transactions-transactionStatePost-0-groovy">Groovy</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatePost-0-objc">Obj-C</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatePost-0-javascript">JavaScript</a>
-                                                </li>
-                                                <!--<li class="">
-              <a href="#examples-Transactions-transactionStatePost-0-angular">Angular</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatePost-0-csharp">C#</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionStatePost-0-php">PHP</a>
-            </li>
-                                            </ul>
-
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Transactions-transactionStatePost-0-curl">
-                                                    <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">post</span> "https://tracker.es.com/api/v1/transaction/state?transactionId=&state="
-
-
-</code></pre>
-                                                </div>
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-java">
-                                                  <pre class="prettyprint"><code class="language-java">
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import .TransactionsApi;
-
-import java.io.File;
-import java.util.*;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID transactionId = transactionId_example; // UUID | The transaction id
-        String state = state_example; // String | The state that the transaction will be changed
-        try {
-            apiInstance.transactionStatePost(transactionId, state);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionStatePost");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-android">
-                                                  <pre class="prettyprint"><code class="language-java">
-import .TransactionsApi;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        TransactionsApi apiInstance = new TransactionsApi();
-        UUID transactionId = transactionId_example; // UUID | The transaction id
-        String state = state_example; // String | The state that the transaction will be changed
-        try {
-            apiInstance.transactionStatePost(transactionId, state);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionStatePost");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-          <!--
-          <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-groovy">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div> -->
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-objc">
-                                                    <pre class="prettyprint"><code class="language-cpp">
-
-UUID *transactionId = transactionId_example; // The transaction id
-String *state = state_example; // The state that the transaction will be changed
-
-TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
-
-// Change the state for a given transaction
-[apiInstance transactionStatePostWith:transactionId
-    state:state
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-
-                                                    </code></pre>
-                                                </div>
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-javascript">
-                                                    <pre class="prettyprint"><code class="language-js">
-var  = require('');
-
-var api = new .TransactionsApi()
-
-var transactionId = transactionId_example; // {UUID} The transaction id
-
-var state = state_example; // {String} The state that the transaction will be changed
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.transactionStatePost(transactionId, state, callback);
-
-                                                    </code></pre>
-                                                </div>
-
-                                                <!--<div class="tab-pane" id="examples-Transactions-transactionStatePost-0-angular">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div>-->
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-csharp">
-                                                    <pre class="prettyprint"><code class="language-cs">
-using System;
-using System.Diagnostics;
-using .Api;
-using .Client;
-using ;
-
-namespace Example
-{
-    public class transactionStatePostExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new TransactionsApi();
-            var transactionId = transactionId_example;  // UUID | The transaction id
-            var state = state_example;  // String | The state that the transaction will be changed
-
-            try
-            {
-                // Change the state for a given transaction
-                apiInstance.transactionStatePost(transactionId, state);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TransactionsApi.transactionStatePost: " + e.Message );
-            }
-        }
-    }
-}
-
-                                                    </code></pre>
-                                                </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatePost-0-php">
-                                                  <pre class="prettyprint"><code class="language-php">
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new io.swagger.client\Api\TransactionsApi();
-$transactionId = transactionId_example; // UUID | The transaction id
-$state = state_example; // String | The state that the transaction will be changed
-
-try {
-    $api_instance->transactionStatePost($transactionId, $state);
-} catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionStatePost: ', $e->getMessage(), PHP_EOL;
-}
-
-                                                  </code></pre>
-          </div>
-
-                                            </div>
-
-
-
-
-
-                                            <h2>Parameters</h2>
-
-
-
-
-
-
-
-
-                                                <div class="methodsubtabletitle">Query parameters</div>
-                                                <table id="methodsubtable">
-                                                    <tr>
-                                                        <th width="150px">Name</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                    <!---->
-                                                        <tr><td style="width:150px;">transactionId*</td>
+                                                        <tr><td style="width:150px;">message*</td>
 <td>
 
 
 <script>
 												$(document).ready(function() {
 													var schemaWrapper = {
-  "name" : "transaction_id",
+  "name" : "message",
   "in" : "query",
-  "description" : "The transaction id",
-  "required" : true,
-  "type" : "string",
-  "format" : "uuid"
-};
-													var schema = schemaWrapper;
-
-
-
-
-													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionStatePost_transactionId');
-													result.empty();
-													result.append(view.render());
-
-
-
-
-
-												});
-												</script>
-												<div id="d2e199_transactionStatePost_transactionId"></div>
-</td>
-</tr>
-
-                                                        <tr><td style="width:150px;">state*</td>
-<td>
-
-
-<script>
-												$(document).ready(function() {
-													var schemaWrapper = {
-  "name" : "state",
-  "in" : "query",
-  "description" : "The state that the transaction will be changed",
+  "description" : "The message to send",
   "required" : true,
   "type" : "string"
 };
@@ -4056,7 +2069,7 @@ try {
 
 
 													var view = new JSONSchemaView(schema,0);
-													var result = $('#d2e199_transactionStatePost_state');
+													var result = $('#d2e199_notificationSmsPost_message');
 													result.empty();
 													result.append(view.render());
 
@@ -4066,7 +2079,7 @@ try {
 
 												});
 												</script>
-												<div id="d2e199_transactionStatePost_state"></div>
+												<div id="d2e199_notificationSmsPost_message"></div>
 </td>
 </tr>
 
@@ -4074,12 +2087,12 @@ try {
 
                                             <h2>Responses</h2>
 
-                                                <h3> Status: 200 - Transaction current state </h3>
+                                                <h3> Status: 200 - Current state </h3>
 
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionStatePost-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationSmsPost-schema">Schema</a>
                                                     </li>
 
 
@@ -4095,17 +2108,17 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionStatePost-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationSmsPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionStatePost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationSmsPost-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
                                                                     var schemaWrapper = {
-  "description" : "Transaction current state"
+  "description" : "Current state"
 };
                                                                     var schema = schemaWrapper.schema;
                                                                     schemaWrapper.definitions = defs;
@@ -4121,8 +2134,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionStatePost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionStatePost-schema-200');
+                                                                        $('#examples-Notifications-notificationSmsPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationSmsPost-schema-200');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -4133,7 +2146,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionStatePost-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationSmsPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -4155,7 +2168,7 @@ try {
                                                 <ul class="nav nav-tabs nav-tabs-examples" >
 
                                                     <li class="active">
-                                                        <a href="#examples-Transactions-transactionStatePost-schema">Schema</a>
+                                                        <a href="#examples-Notifications-notificationSmsPost-schema">Schema</a>
                                                     </li>
 
 
@@ -4171,12 +2184,12 @@ try {
 
 
 
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionStatePost-schema">
+                                                    <div class="tab-pane active" id="examples-Notifications-notificationSmsPost-schema">
 
 
 
 
-                                                        <div id='examples-Transactions-transactionStatePost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                                        <div id='examples-Notifications-notificationSmsPost-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
 
                                                             <script>
                                                                 $(document).ready(function() {
@@ -4200,8 +2213,8 @@ try {
 
 
                                                                         var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionStatePost-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionStatePost-schema-0');
+                                                                        $('#examples-Notifications-notificationSmsPost-schema-data').val(JSON.stringify(resolved.schema));
+                                                                        var result = $('#examples-Notifications-notificationSmsPost-schema-0');
                                                                         result.empty();
                                                                         result.append(view.render());
                                                                     });
@@ -4212,412 +2225,7 @@ try {
                                                                 });
                                                             </script>
                                                         </div>
-                                                        <input id='examples-Transactions-transactionStatePost-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-                                        </article>
-
-                                    </div>
-
-                                    <hr>
-
-
-
-
-
-
-
-
-                                    <div id="api-Transactions-transactionStatsGet">
-
-                                        <article id="api-Transactions-transactionStatsGet-0" data-group="User" data-name="transactionStatsGet" data-version="0">
-                                            <div class="pull-left">
-                                                <h1>transactionStatsGet</h1>
-                                                <p>Stats globals</p>
-                                            </div>
-                                            <div class="pull-right">
-
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                            <p></p>
-                                            <p class="marked">Number of transactions, total value of transactions and number of refunded</p>
-                                            <p></p>
-                                            <br />
-
-                                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/transaction/stats/</span></code></pre>
-
-                                            <p>
-                                                <h3>Usage and SDK Samples</h3>
-                                            </p>
-
-                                            <ul class="nav nav-tabs nav-tabs-examples">
-                                                <li class="active">
-                                                    <a href="#examples-Transactions-transactionStatsGet-0-curl">Curl</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionStatsGet-0-java">Java</a>
-            </li>
-            <li class="">
-              <a href="#examples-Transactions-transactionStatsGet-0-android">Android</a>
-            </li>
-            <!--<li class="">
-              <a href="#examples-Transactions-transactionStatsGet-0-groovy">Groovy</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatsGet-0-objc">Obj-C</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatsGet-0-javascript">JavaScript</a>
-                                                </li>
-                                                <!--<li class="">
-              <a href="#examples-Transactions-transactionStatsGet-0-angular">Angular</a>
-            </li>-->
-                                                <li class="">
-                                                    <a href="#examples-Transactions-transactionStatsGet-0-csharp">C#</a>
-                                                </li>
-                                                <li class="">
-              <a href="#examples-Transactions-transactionStatsGet-0-php">PHP</a>
-            </li>
-                                            </ul>
-
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="examples-Transactions-transactionStatsGet-0-curl">
-                                                    <pre class="prettyprint"><code class="language-bsh">
-curl -X <span style="text-transform: uppercase;">get</span> "https://tracker.es.com/api/v1/transaction/stats/"
-
-
-</code></pre>
-                                                </div>
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-java">
-                                                  <pre class="prettyprint"><code class="language-java">
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import .TransactionsApi;
-
-import java.io.File;
-import java.util.*;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        
-        TransactionsApi apiInstance = new TransactionsApi();
-        try {
-            TransactionStats result = apiInstance.transactionStatsGet();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionStatsGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-android">
-                                                  <pre class="prettyprint"><code class="language-java">
-import .TransactionsApi;
-
-public class TransactionsApiExample {
-
-    public static void main(String[] args) {
-        TransactionsApi apiInstance = new TransactionsApi();
-        try {
-            TransactionStats result = apiInstance.transactionStatsGet();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TransactionsApi#transactionStatsGet");
-            e.printStackTrace();
-        }
-    }
-}
-
-                                                  </code></pre>
-          </div>
-
-          <!--
-          <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-groovy">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div> -->
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-objc">
-                                                    <pre class="prettyprint"><code class="language-cpp">
-
-
-TransactionsApi *apiInstance = [[TransactionsApi alloc] init];
-
-// Stats globals
-[apiInstance transactionStatsGetWithCompletionHandler: 
-              ^(TransactionStats output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-
-                                                    </code></pre>
-                                                </div>
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-javascript">
-                                                    <pre class="prettyprint"><code class="language-js">
-var  = require('');
-
-var api = new .TransactionsApi()
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.transactionStatsGet(callback);
-
-                                                    </code></pre>
-                                                </div>
-
-                                                <!--<div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-angular">
-            <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-          </div>-->
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-csharp">
-                                                    <pre class="prettyprint"><code class="language-cs">
-using System;
-using System.Diagnostics;
-using .Api;
-using .Client;
-using ;
-
-namespace Example
-{
-    public class transactionStatsGetExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new TransactionsApi();
-
-            try
-            {
-                // Stats globals
-                TransactionStats result = apiInstance.transactionStatsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TransactionsApi.transactionStatsGet: " + e.Message );
-            }
-        }
-    }
-}
-
-                                                    </code></pre>
-                                                </div>
-
-
-                                                <div class="tab-pane" id="examples-Transactions-transactionStatsGet-0-php">
-                                                  <pre class="prettyprint"><code class="language-php">
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new io.swagger.client\Api\TransactionsApi();
-
-try {
-    $result = $api_instance->transactionStatsGet();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionStatsGet: ', $e->getMessage(), PHP_EOL;
-}
-
-                                                  </code></pre>
-          </div>
-
-                                            </div>
-
-
-
-
-
-                                            <h2>Parameters</h2>
-
-
-
-
-
-
-
-
-
-                                            <h2>Responses</h2>
-
-                                                <h3> Status: 200 - Global stats </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Transactions-transactionStatsGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionStatsGet-schema">
-
-
-
-
-                                                        <div id='examples-Transactions-transactionStatsGet-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Global stats",
-  "schema" : {
-    "$ref" : "#/definitions/TransactionStats"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionStatsGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionStatsGet-schema-200');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Transactions-transactionStatsGet-schema-data' type='hidden' value=''></input>
-
-
-
-
-
-
-                                                    </div>
-
-
-
-
-                                                </div>
-
-
-
-
-                                                <h3> Status: 0 - Unexpected error </h3>
-
-                                                <ul class="nav nav-tabs nav-tabs-examples" >
-
-                                                    <li class="active">
-                                                        <a href="#examples-Transactions-transactionStatsGet-schema">Schema</a>
-                                                    </li>
-
-
-                                                </ul>
-
-
-
-
-
-
-
-                                                <div class="tab-content" style='margin-bottom: 10px;'>
-
-
-
-                                                    <div class="tab-pane active" id="examples-Transactions-transactionStatsGet-schema">
-
-
-
-
-                                                        <div id='examples-Transactions-transactionStatsGet-schema-0' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-
-                                                            <script>
-                                                                $(document).ready(function() {
-                                                                    var schemaWrapper = {
-  "description" : "Unexpected error",
-  "schema" : {
-    "$ref" : "#/definitions/Error"
-  }
-};
-                                                                    var schema = schemaWrapper.schema;
-                                                                    schemaWrapper.definitions = defs;
-                                                                    //console.log(JSON.stringify(schema))
-                                                                    JsonRefs.resolveRefs(schemaWrapper, {
-                                                                        "depth": 3,
-                                                                        "resolveRemoteRefs": false,
-                                                                        "resolveFileRefs": false
-                                                                    }, function(err, resolved, metadata) {
-
-                                                                        //console.log(JSON.stringify(resolved));
-
-
-
-                                                                        var view = new JSONSchemaView(resolved.schema, 3);
-                                                                        $('#examples-Transactions-transactionStatsGet-schema-data').val(JSON.stringify(resolved.schema));
-                                                                        var result = $('#examples-Transactions-transactionStatsGet-schema-0');
-                                                                        result.empty();
-                                                                        result.append(view.render());
-                                                                    });
-
-
-
-
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                        <input id='examples-Transactions-transactionStatsGet-schema-data' type='hidden' value=''></input>
+                                                        <input id='examples-Notifications-notificationSmsPost-schema-data' type='hidden' value=''></input>
 
 
 
@@ -4671,7 +2279,7 @@ try {
             </div>
             <div id="generator">
                 <div class="content">
-                    Generated 2016-12-12T11:59:24.012Z
+                    Generated 2016-12-12T11:58:22.953Z
                 </div>
             </div>
         </div>
